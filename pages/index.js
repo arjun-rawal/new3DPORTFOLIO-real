@@ -12,7 +12,7 @@ const inter = Inter({ subsets: ['latin'] })
 export default function Home() {
   return (
     <div className={styles.cv}>
-    <Spline  scene="https://prod.spline.design/exL5ryaNv72stspn/scene.splinecode"/>
+    <Spline  scene="https://prod.spline.design/5uxNGoicFfDdXS6W/scene.splinecode"/>
     </div>
   )
 }

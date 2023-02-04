@@ -1,4 +1,4 @@
-body{
+html, body{
   overflow:hidden;
-  background-color: RGB(50, 39, 65);
+  margin:0px;
 }

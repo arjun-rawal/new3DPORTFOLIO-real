@@ -11,20 +11,26 @@ import Spline from '@splinetool/react-spline';
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
-  const cube = useRef();
+  const nameTag = useRef();
+  const projectsTag = useRef();
   function onLoad(spline) {
-    const obj = spline.findObjectById('323c6622-9e0c-430b-a9a7-e6dc37ab444b');
-    cube.current = obj;
+    const Name = spline.findObjectByName('Name');
+    const projects = spline.findObjectByName('Projects')
+    projectsTag.current = projects;
+    nameTag.current = Name;
   }
-  function moveObj() {
-    console.log(cube.current); 
-    cube.current.position.x += 10;
+  function clearAll() {
+    nameTag.current.visible=false;
+    projectsTag.current.visible=false;
   }
   return (
     <div style={{width:"100vw",height:"100vh"}}>
     <Spline onLoad={onLoad} scene="https://prod.spline.design/5uxNGoicFfDdXS6W/scene.splinecode" />
-    <button style={{position:'fixed',top:'0px'}}type="button" onClick={moveObj}>
-        Move Cube
+    <button style={{position:'fixed',top:'0px'}}type="button" onClick={()=>{clearAll(); nameTag.current.visible=true;}}>
+      Arjun Rawal
+      </button>
+      <button style={{position:'fixed',top:'30px'}}type="button" onClick={()=>{clearAll(); projectsTag.current.visible=true;}}>
+      Projects
       </button>
     </div>
   )

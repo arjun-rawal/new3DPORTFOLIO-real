@@ -11,15 +11,17 @@ import Spline from '@splinetool/react-spline';
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+  const spline = useRef();
   const nameTag = useRef();
   const projectsTag = useRef();
-  function onLoad(spline) {
-    const Name = spline.findObjectByName('Name');
-    const projects = spline.findObjectByName('Projects')
+  function onLoad(splineApp) {
+    const Name = splineApp.findObjectByName('Name');
+    const projects = splineApp.findObjectByName('Projects')
     projectsTag.current = projects;
     nameTag.current = Name;
     clearAll();
     nameTag.current.visible=true;
+    spline.current=splineApp;
   }
 
   function clearAll() {
@@ -32,9 +34,9 @@ export default function Home() {
     <p className={styles.name} type="button" onMouseOver={()=>{clearAll(); nameTag.current.visible=true;}}>
       Arjun Rawal
       </p>
-      <p className={styles.projects} type="button" onMouseOver={()=>{clearAll(); projectsTag.current.visible=true;}}>
+      <p className={styles.projects} type="button" onClick={()=>{spline.current.emitEvent('mouseHover', 'bottomDrawer');}}onMouseOver={()=>{clearAll(); projectsTag.current.visible=true;}}>
       Projects
-      </p>
+      </p>  
     </div>
   )
 }

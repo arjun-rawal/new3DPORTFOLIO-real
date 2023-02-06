@@ -11,7 +11,9 @@
   font-weight:bold;
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }
-
+.name:hover{
+  text-decoration:underline; 
+}
 .projects{
   top:8%;
   position:fixed;
@@ -19,4 +21,8 @@
   left:2%;
   font-weight:bold;
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+.projects:hover{
+  text-decoration:underline;
 }

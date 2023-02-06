@@ -2,3 +2,21 @@
   height: 1920px;
   width: 1080px;
 }
+
+.name{
+  top:0%;
+  position:fixed;
+  font-size:xx-large;
+  left:2%;
+  font-weight:bold;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+.projects{
+  top:8%;
+  position:fixed;
+  font-size:x-large;
+  left:2%;
+  font-weight:bold;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}

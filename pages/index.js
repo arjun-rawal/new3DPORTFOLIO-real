@@ -26,12 +26,12 @@ export default function Home() {
   return (
     <div style={{width:"100vw",height:"100vh"}}>
     <Spline onLoad={onLoad} scene="https://prod.spline.design/5uxNGoicFfDdXS6W/scene.splinecode" />
-    <button style={{position:'fixed',top:'0px'}}type="button" onClick={()=>{clearAll(); nameTag.current.visible=true;}}>
+    <p className={styles.name} type="button" onMouseOver={()=>{clearAll(); nameTag.current.visible=true;}}>
       Arjun Rawal
-      </button>
-      <button style={{position:'fixed',top:'30px'}}type="button" onClick={()=>{clearAll(); projectsTag.current.visible=true;}}>
+      </p>
+      <p className={styles.projects} type="button" onMouseOver={()=>{clearAll(); projectsTag.current.visible=true;}}>
       Projects
-      </button>
+      </p>
     </div>
   )
 }

@@ -18,7 +18,10 @@ export default function Home() {
     const projects = spline.findObjectByName('Projects')
     projectsTag.current = projects;
     nameTag.current = Name;
+    clearAll();
+    nameTag.current.visible=true;
   }
+
   function clearAll() {
     nameTag.current.visible=false;
     projectsTag.current.visible=false;
